@@ -1,0 +1,47 @@
+[
+  {
+    "name": "Product name 1",
+    "thumbnail": "https://picsum.photos/286/180",
+    "description": "This is a very very very long product description. This is a very very very long product description."
+  },
+  {
+    "name": "Product name 2",
+    "thumbnail": "https://picsum.photos/286/180",
+    "description": "This is a very very very long product description."
+  },
+  {
+    "name": "Product name 3",
+    "thumbnail": "https://picsum.photos/286/180",
+    "description": "This is a very very very long product description. This is a very very very long product description."
+  },
+  {
+    "name": "Product name 4",
+    "thumbnail": "https://picsum.photos/286/180",
+    "description": "This is a very very very long product description."
+  },
+  {
+    "name": "Product name 5",
+    "thumbnail": "https://picsum.photos/286/180",
+    "description": "This is a very very very long product description. This is a very very very long product description."
+  },
+  {
+    "name": "Product name 6",
+    "thumbnail": "https://picsum.photos/286/180",
+    "description": "This is a very very very long product description."
+  },
+  {
+    "name": "Product name 7",
+    "thumbnail": "https://picsum.photos/286/180",
+    "description": "This is a very very very long product description. This is a very very very long product description."
+  },
+  {
+    "name": "Product name 8",
+    "thumbnail": "https://picsum.photos/286/180",
+    "description": "This is a very very very long product description."
+  },
+  {
+    "name": "Product name 9",
+    "thumbnail": "https://picsum.photos/286/180",
+    "description": "This is a very very very long product description. This is a very very very long product description."
+  }
+]

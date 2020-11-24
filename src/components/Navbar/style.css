@@ -1,0 +1,15 @@
+.navbar {
+  box-shadow: 2px 2px 4px 2px #ddd;
+  animation-name: navbar-landing;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  font-size: 17px;
+}
+@keyframes navbar-landing {
+  from {
+    transform: translateY(-3rem);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
