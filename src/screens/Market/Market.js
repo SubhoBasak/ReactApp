@@ -2,6 +2,7 @@ import React from "react";
 
 // components
 import Display from "../../components/Display";
+import Filter from "../../components/Filter";
 
 // layout
 import Grid from "../../layouts/Grid";

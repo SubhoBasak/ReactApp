@@ -1,9 +1,10 @@
 import React from "react";
 import { Card as CardBT, Button } from "react-bootstrap";
+import "./style.css";
 
 const Card = (props) => {
   return (
-    <CardBT style={{ width: "18rem", minWidth: "18rem", zIndex: "-200" }}>
+    <CardBT className="card-view">
       <CardBT.Img variant="top" src={props.image} />
       <CardBT.Body>
         <CardBT.Title>{props.title}</CardBT.Title>

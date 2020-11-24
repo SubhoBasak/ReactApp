@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 
 // screens
 import Contacts from "./screens/Account/Contacts";
+import Message from "./screens/Account/Message";
 import Profile from "./screens/Account/Profile";
 import Dashboard from "./screens/Dashboard";
 import Home from "./screens/Home";
@@ -24,6 +25,7 @@ function App() {
       <Route path="/contacts/" component={Contacts} />
       <Route path="/dashboard/" component={Dashboard} />
       <Route path="/market/" component={Market} />
+      <Route path="/message/" component={Message} />
       <Route path="/order/" component={Order} />
       <Route path="/profile/" component={Profile} />
       <Route path="/settings/" component={Settings} />

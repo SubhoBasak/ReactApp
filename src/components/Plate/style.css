@@ -2,7 +2,9 @@
   margin: auto;
   width: 95%;
   border-bottom: 1px solid #ddd;
+  border-radius: 5px;
   display: flex;
+  padding: 5px;
   padding-bottom: 8px;
   margin-bottom: 1.2rem;
 }
@@ -15,6 +17,9 @@
 }
 .plate span {
   font-size: 20px;
+}
+.plate:hover {
+  box-shadow: 2px 2px 4px 2px gray;
 }
 @media screen and (max-width: 500px) {
   .plate img {
