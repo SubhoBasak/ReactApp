@@ -1,13 +1,8 @@
 import React from "react";
-
-// components
-import Plate from "../../components/Plate";
+import "./style.css";
 
 const List = (props) => {
-  const items = props.products.map((data) => (
-    <Plate title={data.name} image={data.thumbnail} text={data.description} />
-  ));
-  return <div style={{ display: "block", padding: "5px" }}>{items}</div>;
+  return <div className="list-container">{props.items}</div>;
 };
 
 export default List;

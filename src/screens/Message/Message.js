@@ -1,8 +1,11 @@
 import React from "react";
 import "./style.css";
 
+// layouts
+import Drawer from "../../layouts/Drawer";
+
 const Message = () => {
-  return <p>Hello World</p>;
+  return <Drawer />;
 };
 
 export default Message;

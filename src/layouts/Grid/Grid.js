@@ -5,9 +5,14 @@ import Card from "../../components/Card";
 
 const Grid = (props) => {
   const items = props.products.map((data) => (
-    <Card title={data.name} image={data.thumbnail} text={data.description} />
+    <Card
+      title={data.name}
+      image={data.thumbnail}
+      text={data.description}
+      rate={data.rating}
+    />
   ));
-  return <Row className="px-5 mt-2">{items}</Row>;
+  return <Row className="w-100 ml-1 mt-2">{items}</Row>;
 };
 
 export default Grid;

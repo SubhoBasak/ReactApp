@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Market",
+  "name": "An online market on your hand",
   "icons": [
     {
       "src": "favicon.ico",
