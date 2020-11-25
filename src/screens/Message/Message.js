@@ -1,7 +1,8 @@
 import React from "react";
+import "./style.css";
 
 const Message = () => {
-  return <p>Message</p>;
+  return <p>Hello World</p>;
 };
 
 export default Message;

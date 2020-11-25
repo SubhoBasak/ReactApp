@@ -7,13 +7,13 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 // screens
-import Contacts from "./screens/Account/Contacts";
-import Message from "./screens/Account/Message";
-import Profile from "./screens/Account/Profile";
+import Contacts from "./screens/Contacts";
 import Dashboard from "./screens/Dashboard";
 import Home from "./screens/Home";
 import Market from "./screens/Market";
+import Message from "./screens/Message";
 import Order from "./screens/Order";
+import Profile from "./screens/Profile";
 import Settings from "./screens/Settings";
 import Terms from "./screens/Terms";
 

@@ -1,7 +1,8 @@
 import React from "react";
+import "./style.css";
 
 const Profile = () => {
-  return <p>Profile</p>;
+  return <p>Hello World</p>;
 };
 
 export default Profile;
