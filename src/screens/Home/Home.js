@@ -4,10 +4,7 @@ import { Link } from "react-router-dom";
 import "./style.css";
 
 // import icons
-import { RiBarChartBoxLine } from "react-icons/ri";
-import { AiOutlineShop } from "react-icons/ai";
-import { VscListUnordered } from "react-icons/vsc";
-import { FiMessageSquare } from "react-icons/fi";
+import { TiTickOutline } from "react-icons/ti";
 
 // components
 import Banner from "../../components/Banner";
@@ -19,35 +16,73 @@ const Home = () => {
       <Row className="home-nav">
         <Col lg="3" md="6" sm="12" className="p-0">
           <Link to="/dashboard/">
-            <p className="alert alert-primary m-0">
-              <RiBarChartBoxLine className="mx-2" />
-              Dashboard
-            </p>
+            <div className="home-nav-link alert alert-primary m-0">
+              <div className="d-flex w-100">
+                <img src="/assets/images/dashboard.png" alt="Icon" />
+                <p>Dashboard</p>
+              </div>
+            </div>
           </Link>
         </Col>
         <Col lg="3" md="6" sm="12" className="p-0">
-          <Link to="/dashboard/">
-            <p className="alert alert-success m-0">
-              <AiOutlineShop className="mx-2" />
-              Market
-            </p>
+          <Link to="/market/">
+            <div className="home-nav-link alert alert-success m-0">
+              <div className="d-flex w-100">
+                <img src="/assets/images/market.png" alt="Icon" />
+                <p>Market</p>
+              </div>
+            </div>
           </Link>
         </Col>
         <Col lg="3" md="6" sm="12" className="p-0">
-          <Link to="/dashboard/">
-            <p className="alert alert-warning m-0">
-              <VscListUnordered className="mx-2" />
-              Orders
-            </p>
+          <Link to="/orders/">
+            <div className="home-nav-link alert alert-warning m-0">
+              <div className="d-flex w-100">
+                <img src="/assets/images/orders.png" alt="Icon" />
+                <p>Orders</p>
+              </div>
+            </div>
           </Link>
         </Col>
         <Col lg="3" md="6" sm="12" className="p-0">
-          <Link to="/dashboard/">
-            <p className="alert alert-danger m-0">
-              <FiMessageSquare className="mx-2" />
-              Messages
-            </p>
+          <Link to="/messages/">
+            <div className="home-nav-link alert alert-danger m-0">
+              <div className="d-flex w-100">
+                <img src="/assets/images/messages.png" alt="Icon" />
+                <p>Messages</p>
+              </div>
+            </div>
           </Link>
+        </Col>
+      </Row>
+      <Row className="grow">
+        <Col lg="7" md="6" sm="12">
+          <img src="/assets/images/grow.jpg" alt="Photo" />
+        </Col>
+        <Col lg="5" md="6" sm="12" className="grow-text mt-lg-5">
+          <p className="grow-text-header mt-lg-2">Grow your business with us</p>
+          <p className="grow-text-body">
+            Connect with the large community. More designes, more categories,
+            more merchants. Work smart, not hard.
+            <ul className="mt-5 pl-3">
+              <li className="m-2 text-primary">
+                <TiTickOutline className="mr-2" />
+                Easy to use
+              </li>
+              <li className="m-2 text-success">
+                <TiTickOutline className="mr-2" />
+                Mobile compatible
+              </li>
+              <li className="m-2 text-warning">
+                <TiTickOutline className="mr-2" />
+                Budget friendly
+              </li>
+              <li className="m-2 text-danger">
+                <TiTickOutline className="mr-2" />
+                Safe and secure
+              </li>
+            </ul>
+          </p>
         </Col>
       </Row>
     </>

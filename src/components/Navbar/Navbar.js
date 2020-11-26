@@ -16,7 +16,6 @@ import Auth from "../Auth";
 // import icons
 import { FaSearch } from "react-icons/fa";
 import { FiUser } from "react-icons/fi";
-import { RiContactsLine } from "react-icons/ri";
 import { AiOutlineSetting } from "react-icons/ai";
 import { BiLogOutCircle } from "react-icons/bi";
 
@@ -35,6 +34,7 @@ const Navbar = () => {
             width={30}
             height={30}
             className="mr-2"
+            alt="Logo"
           />
           Market
         </NavbarBT.Brand>
@@ -60,10 +60,6 @@ const Navbar = () => {
               <NavDropdown.Item href="/profile/">
                 <FiUser className="mr-2" />
                 Profile
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/contacts/">
-                <RiContactsLine className="mr-2" />
-                Contacts
               </NavDropdown.Item>
               <NavDropdown.Item href="/settings/">
                 <AiOutlineSetting className="mr-2" />

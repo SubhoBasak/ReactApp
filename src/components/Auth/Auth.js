@@ -1,5 +1,5 @@
 import React from "react";
-import { HashRouter, Redirect, Route, Switch } from "react-router-dom";
+import { HashRouter, Redirect, Route } from "react-router-dom";
 import { Modal } from "react-bootstrap";
 
 // components
@@ -23,13 +23,13 @@ const Auth = (props) => {
             width={30}
             height={30}
             className="mr-2"
+            alt="Logo"
           />
           Market
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <HashRouter hashType="noslash" basename="/">
-          {/* <Switch> */}
           <Route exact path="">
             <Redirect to="login" />
           </Route>
@@ -37,7 +37,6 @@ const Auth = (props) => {
           <Route path="/forgot" component={Forgot} />
           <Route path="/register" component={Register} />
           <Route path="/reset" component={Reset} />
-          {/* </Switch> */}
         </HashRouter>
       </Modal.Body>
     </Modal>

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Form, Button } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 
 // import icons
 import { BiReset } from "react-icons/bi";
@@ -15,7 +15,7 @@ const Login = (props) => {
         <BiReset className="mx-3" />
         Reset Password
       </h4>
-      <Form className="w-100 p-3">
+      <div className="w-100 p-3">
         <input className="form-control my-3" type="email" placeholder="Email" />
         <Password this_id="1" placeholder="Old password" />
         <Password this_id="2" placeholder="New password" />
@@ -23,7 +23,7 @@ const Login = (props) => {
         <Button className="btn-success my-3" type="submit">
           Reset
         </Button>
-      </Form>
+      </div>
       <div className="modal-footer">
         <Link className="modal-footer-link" to={"/login"}>
           Login

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Form, Button } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 
 // import icons
 import { BiLogInCircle } from "react-icons/bi";
@@ -15,7 +15,7 @@ const Login = (props) => {
         <BiLogInCircle className="mx-3" />
         Login
       </h4>
-      <Form action="#" className="w-100 p-3">
+      <div className="w-100 p-3">
         <input
           className="form-control my-3"
           type="email"
@@ -26,7 +26,7 @@ const Login = (props) => {
         <Button className="btn-success my-3" type="submit">
           Login
         </Button>
-      </Form>
+      </div>
       <div className="modal-footer">
         <Link className="modal-footer-link" to={"/forgot"}>
           Forogot password

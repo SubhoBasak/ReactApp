@@ -1,7 +1,10 @@
 import React from "react";
 
+// components
+import Drawer from "../../layouts/Drawer";
+
 const Order = () => {
-  return <p>Order</p>;
+  return <Drawer />;
 };
 
 export default Order;

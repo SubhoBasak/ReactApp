@@ -31,7 +31,7 @@ const Password = (props) => {
           outline: "none",
         }}
         onClick={() => {
-          if (showPswd == false) {
+          if (showPswd === false) {
             setShowPswd(true);
             document.getElementById(props.this_id).type = "text";
           } else {

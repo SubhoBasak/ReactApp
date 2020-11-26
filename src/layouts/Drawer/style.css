@@ -3,12 +3,16 @@
   margin-bottom: 1rem;
 }
 .drawer-top {
-  height: 100vh;
+  height: 110vh;
   overflow-y: scroll;
 }
-
 .drawer-bottom {
-  height: 100vh;
+  height: 110vh;
   overflow-y: scroll;
   background: #f0f0f0;
+}
+@media screen and (max-width: 500px) {
+  .drawer-bottom {
+    display: none;
+  }
 }

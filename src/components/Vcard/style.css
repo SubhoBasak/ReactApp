@@ -1,0 +1,38 @@
+.vcard {
+  display: flex;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.5rem;
+  justify-content: space-between;
+}
+.vcard-search {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+.vcard img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+.vcard button {
+  border: none;
+  outline: none;
+  background: none;
+}
+.vcard-profile {
+  display: flex;
+}
+.vcard-text {
+  margin-left: 1rem;
+  cursor: pointer;
+}
+.vcard-text p {
+  font-weight: bold;
+  margin-bottom: 0;
+}
+.vcard-text span {
+  padding-top: 0;
+}
+#dropdown-basic-button::after {
+  display: none;
+}
