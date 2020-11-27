@@ -20,7 +20,7 @@ import Terms from "./screens/Terms";
 
 function App() {
   return (
-    <BrowserRouter basename="/online_market">
+    <BrowserRouter>
       <Navbar />
       <Switch>
         <Route exact path="/" component={Home} />
