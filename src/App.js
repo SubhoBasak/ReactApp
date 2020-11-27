@@ -1,3 +1,4 @@
+import React from "react";
 import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
 import "./style.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -19,7 +20,7 @@ import Terms from "./screens/Terms";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/online_market">
       <Navbar />
       <Switch>
         <Route exact path="/" component={Home} />

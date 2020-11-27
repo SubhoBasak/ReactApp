@@ -1,7 +1,10 @@
 import React from "react";
 
+// components
+import Drawer from "../../layouts/Drawer";
+
 const Settings = () => {
-  return <p>Settings</p>;
+  return <Drawer />;
 };
 
 export default Settings;

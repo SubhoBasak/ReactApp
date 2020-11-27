@@ -1,13 +1,13 @@
 import React from "react";
 import {
   Navbar as NavbarBT,
-  Form,
   Button,
   FormControl,
   Nav,
   NavDropdown,
   Badge,
 } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 import "./style.css";
 
 // component
@@ -16,6 +16,7 @@ import Auth from "../Auth";
 // import icons
 import { FaSearch } from "react-icons/fa";
 import { FiUser } from "react-icons/fi";
+import { RiContactsLine } from "react-icons/ri";
 import { AiOutlineSetting } from "react-icons/ai";
 import { BiLogOutCircle } from "react-icons/bi";
 
@@ -34,7 +35,6 @@ const Navbar = () => {
             width={30}
             height={30}
             className="mr-2"
-            alt="Logo"
           />
           Market
         </NavbarBT.Brand>
@@ -44,27 +44,41 @@ const Navbar = () => {
           id="basic-NavbarBT-nav"
         >
           <Nav className="mr-auto">
-            <Nav.Link href="/market/">Market</Nav.Link>
-            <Nav.Link href="/message/">
+            <NavLink
+              to="/market/"
+              className="pt-md-2 pt-3 pl-md-2 pl-4 px-2 text-dark"
+            >
+              Market
+            </NavLink>
+            <NavLink
+              to="/message/"
+              className="pt-md-2 pt-3 pl-md-2 pl-4 px-2 text-dark"
+            >
               Message
               <Badge pill variant="danger" className="ml-1">
                 2
               </Badge>
-            </Nav.Link>
-            <Nav.Link href="/order/">Orders</Nav.Link>
+            </NavLink>
+            <NavLink
+              to="/order/"
+              className="pt-md-2 pt-3 pl-md-2 pl-4 px-2 text-dark"
+            >
+              Orders
+            </NavLink>
             <NavDropdown
+              className="pt-md-0 pt-3 pl-md-2 pl-4"
               title="My Account"
               id="basic-nav-dropdown"
               style={{ zIndex: 5000 }}
             >
-              <NavDropdown.Item href="/profile/">
+              <NavLink to="/profile/" className="dropdown-item text-dark">
                 <FiUser className="mr-2" />
                 Profile
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/settings/">
+              </NavLink>
+              <NavLink to="/settings/" className="dropdown-item text-dark">
                 <AiOutlineSetting className="mr-2" />
                 Settings
-              </NavDropdown.Item>
+              </NavLink>
               <NavDropdown.Item
                 onClick={() => {
                   setAuthModal(true);
@@ -75,12 +89,12 @@ const Navbar = () => {
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
-          <Form inline>
-            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+          <div className="d-flex py-md-0 py-2">
+            <FormControl type="text" placeholder="Search" className="mr-2" />
             <Button variant="outline-primary">
               <FaSearch />
             </Button>
-          </Form>
+          </div>
         </NavbarBT.Collapse>
       </NavbarBT>
       <QuickAccess />

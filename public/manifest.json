@@ -1,5 +1,4 @@
 {
-  "homepage": ".",
   "short_name": "Market",
   "name": "An online market on your hand",
   "icons": [
@@ -19,7 +18,7 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "start_url": "/online_market/",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
