@@ -20,7 +20,7 @@ import Terms from "./screens/Terms";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/react">
       <Navbar />
       <Switch>
         <Route exact path="/" component={Home} />
