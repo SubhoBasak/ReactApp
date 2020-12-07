@@ -13,12 +13,22 @@ import { BiDotsVerticalRounded } from "react-icons/bi";
 // TODO - use API
 import test_data from "./test_data.json";
 
-const Vcard = () => {
+const Vcard = (props) => {
+  const show_profile = () => {
+    if (window.screen.width < 770) {
+      window.location.replace(
+        window.location.protocol + "//" + window.location.host + "/profile/"
+      );
+    } else {
+      props.set_profile_view();
+    }
+  };
+
   const cards = test_data.map((data) => {
     return (
       <div className="vcard">
         <div className="vcard-profile">
-          <img src={data.image} alt="Image" />
+          <img src={data.image} alt="profile" />
           <div className="vcard-text">
             <p>{data.name}</p>
             <span>{data.phone}</span>
@@ -31,11 +41,11 @@ const Vcard = () => {
           title={<BiDotsVerticalRounded />}
           variant="light"
         >
-          <Dropdown.Item href="#">
+          <Dropdown.Item onClick={() => show_profile()}>
             <FiUser className="mr-2" />
             Profile
           </Dropdown.Item>
-          <Dropdown.Item href="#">
+          <Dropdown.Item>
             <AiOutlineUserDelete className="mr-2" />
             Remove
           </Dropdown.Item>

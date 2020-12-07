@@ -18,7 +18,10 @@ const Home = () => {
           <Link to="/dashboard/">
             <div className="home-nav-link alert alert-primary m-0">
               <div className="d-flex w-100">
-                <img src="/assets/images/dashboard.png" alt="Icon" />
+                <img
+                  src={require("../../assets/images/dashboard.png").default}
+                  alt="icon"
+                />
                 <p>Dashboard</p>
               </div>
             </div>
@@ -28,7 +31,10 @@ const Home = () => {
           <Link to="/market/">
             <div className="home-nav-link alert alert-success m-0">
               <div className="d-flex w-100">
-                <img src="/assets/images/market.png" alt="Icon" />
+                <img
+                  src={require("../../assets/images/market.png").default}
+                  alt="icon"
+                />
                 <p>Market</p>
               </div>
             </div>
@@ -38,17 +44,23 @@ const Home = () => {
           <Link to="/orders/">
             <div className="home-nav-link alert alert-warning m-0">
               <div className="d-flex w-100">
-                <img src="/assets/images/orders.png" alt="Icon" />
+                <img
+                  src={require("../../assets/images/orders.png").default}
+                  alt="icon"
+                />
                 <p>Orders</p>
               </div>
             </div>
           </Link>
         </Col>
         <Col lg="3" md="6" sm="12" className="p-0">
-          <Link to="/messages/">
+          <Link to="/message/">
             <div className="home-nav-link alert alert-danger m-0">
               <div className="d-flex w-100">
-                <img src="/assets/images/messages.png" alt="Icon" />
+                <img
+                  src={require("../../assets/images/messages.png").default}
+                  alt="icon"
+                />
                 <p>Messages</p>
               </div>
             </div>
@@ -57,7 +69,10 @@ const Home = () => {
       </Row>
       <Row className="grow">
         <Col lg="7" md="6" sm="12">
-          <img src="/assets/images/grow.jpg" alt="Photo" />
+          <img
+            src={require("../../assets/images/grow.jpg").default}
+            alt="grow"
+          />
         </Col>
         <Col lg="5" md="6" sm="12" className="grow-text mt-lg-5">
           <p className="grow-text-header mt-lg-2">Grow your business with us</p>

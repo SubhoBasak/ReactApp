@@ -1,10 +1,8 @@
 import React from "react";
-
-// components
-import Drawer from "../../layouts/Drawer";
+import "./style.css";
 
 const Order = () => {
-  return <Drawer />;
+  return <p>single order</p>;
 };
 
 export default Order;

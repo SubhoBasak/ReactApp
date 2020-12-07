@@ -10,24 +10,24 @@ import NotFound from "./components/NotFound";
 
 // screens
 import Dashboard from "./screens/Dashboard";
+import Details from "./screens/Details";
 import Home from "./screens/Home";
 import Market from "./screens/Market";
-import Message from "./screens/Message";
-import Order from "./screens/Order";
+import Orders from "./screens/Orders";
 import Profile from "./screens/Profile";
 import Settings from "./screens/Settings";
 import Terms from "./screens/Terms";
 
 function App() {
   return (
-    <BrowserRouter basename="/react">
+    <BrowserRouter>
       <Navbar />
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/dashboard/" component={Dashboard} />
+        <Route path="/details/" component={Details} />
         <Route path="/market/" component={Market} />
-        <Route path="/message/" component={Message} />
-        <Route path="/order/" component={Order} />
+        <Route path="/orders/" component={Orders} />
         <Route path="/profile/" component={Profile} />
         <Route path="/settings/" component={Settings} />
         <Route path="/terms/" component={Terms} />

@@ -16,7 +16,6 @@ import Auth from "../Auth";
 // import icons
 import { FaSearch } from "react-icons/fa";
 import { FiUser } from "react-icons/fi";
-import { RiContactsLine } from "react-icons/ri";
 import { AiOutlineSetting } from "react-icons/ai";
 import { BiLogOutCircle } from "react-icons/bi";
 
@@ -31,10 +30,11 @@ const Navbar = () => {
       <NavbarBT bg="light" expand="md" className="navbar">
         <NavbarBT.Brand className="navbar-brand" href="/">
           <img
-            src="/assets/images/favicon.ico"
+            src={require("../../assets/images/favicon.ico").default}
             width={30}
             height={30}
             className="mr-2"
+            alt="brand logo"
           />
           Market
         </NavbarBT.Brand>
@@ -51,19 +51,13 @@ const Navbar = () => {
               Market
             </NavLink>
             <NavLink
-              to="/message/"
-              className="pt-md-2 pt-3 pl-md-2 pl-4 px-2 text-dark"
-            >
-              Message
-              <Badge pill variant="danger" className="ml-1">
-                2
-              </Badge>
-            </NavLink>
-            <NavLink
-              to="/order/"
+              to="/orders/"
               className="pt-md-2 pt-3 pl-md-2 pl-4 px-2 text-dark"
             >
               Orders
+              <Badge pill variant="danger" className="ml-1">
+                2
+              </Badge>
             </NavLink>
             <NavDropdown
               className="pt-md-0 pt-3 pl-md-2 pl-4"

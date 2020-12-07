@@ -1,0 +1,32 @@
+.img-container {
+  display: block;
+}
+.main-img-container {
+  display: flex;
+  justify-content: center;
+}
+.main-img-container img {
+  max-width: 100%;
+  max-height: 660px;
+  object-fit: scale-down;
+}
+.sub-imgs {
+  display: flex;
+  overflow-x: scroll;
+  width: 100%;
+  justify-content: left;
+}
+.sub-imgs::-webkit-scrollbar {
+  height: 8px;
+}
+.sub-imgs img {
+  display: block;
+  max-width: 150px;
+  object-fit: scale-down;
+  margin: 0.8rem;
+}
+.details-btn button {
+  font-size: 1.4rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}

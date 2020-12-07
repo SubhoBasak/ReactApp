@@ -10,7 +10,7 @@ const Banner = () => {
   const slides = test_data.map((data) => {
     return (
       <Carousel.Item>
-        <img className="d-block w-100" src={data.image} alt="Image" />
+        <img className="d-block w-100" src={data.image} alt="banner" />
         <Carousel.Caption>
           <h3>{data.title}</h3>
           <p>{data.text}</p>
@@ -20,7 +20,11 @@ const Banner = () => {
   });
 
   return (
-    <Carousel interval={1500} style={{ zIndex: "-3" }}>
+    <Carousel
+      className="banner-container"
+      interval={1500}
+      style={{ zIndex: "-3" }}
+    >
       {slides}
     </Carousel>
   );

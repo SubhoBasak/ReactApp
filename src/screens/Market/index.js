@@ -4,7 +4,7 @@ import React from "react";
 import Banner from "../../components/Banner";
 
 // layout
-import Grid from "../../layouts/Grid";
+import CardGrid from "../../layouts/CardGrid";
 
 // TODO - use API
 // import test data
@@ -17,7 +17,7 @@ const Market = () => {
       <div className="d-flex w-100 justify-content-center my-5">
         <h1>Market</h1>
       </div>
-      <Grid products={products} />
+      <CardGrid products={products} />
     </>
   );
 };
