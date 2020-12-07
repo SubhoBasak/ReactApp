@@ -33,10 +33,10 @@ const Navbar = () => {
             src={require("../../assets/images/favicon.ico").default}
             width={30}
             height={30}
-            className="mr-2"
+            className="mr-2 text-dark"
             alt="brand logo"
           />
-          Market
+          SNBMarket
         </NavbarBT.Brand>
         <NavbarBT.Toggle aria-controls="basic-NavbarBT-nav" />
         <NavbarBT.Collapse

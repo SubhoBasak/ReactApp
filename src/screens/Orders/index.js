@@ -1,4 +1,5 @@
 import React from "react";
+import { Modal, Button } from "react-bootstrap";
 import "./style.css";
 
 // components
@@ -13,6 +14,8 @@ import Order from "../Order";
 import Profile from "../Profile";
 
 const Orders = () => {
+  const [modalView, setModalView] = React.useState([false, ""]);
+
   const [bottomView, setBottomView] = React.useState(0);
   console.log(bottomView);
 
@@ -33,10 +36,31 @@ const Orders = () => {
           <Vcard
             set_order_view={() => setBottomView(1)}
             set_profile_view={() => setBottomView(2)}
+            show_remove_modal={() => setModalView([true, "remove"])}
+            show_block_modal={() => setModalView([true, "block"])}
           />
         }
         bottom={bottom_view}
       />
+      <Modal show={modalView[0]} onHide={() => setModalView([false, ""])}>
+        <Modal.Header closeButton>
+          <Modal.Title className="">{modalView[1]} merchant</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          Are you sure you want to {modalView[1]} this merchant?
+        </Modal.Body>
+        <Modal.Footer>
+          <Button
+            variant="danger"
+            onClick={() => console.log("merchant removed")}
+          >
+            Yes
+          </Button>
+          <Button variant="secondary" onClick={() => setModalView([false, ""])}>
+            No
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </>
   );
 };

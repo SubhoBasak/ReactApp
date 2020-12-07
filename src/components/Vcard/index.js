@@ -45,7 +45,7 @@ const Vcard = (props) => {
             <FiUser className="mr-2" />
             Profile
           </Dropdown.Item>
-          <Dropdown.Item>
+          <Dropdown.Item onClick={() => props.show_remove_modal()}>
             <AiOutlineUserDelete className="mr-2" />
             Remove
           </Dropdown.Item>
@@ -53,7 +53,7 @@ const Vcard = (props) => {
             <GoReport className="mr-2" />
             Report
           </Dropdown.Item>
-          <Dropdown.Item href="#">
+          <Dropdown.Item onClick={() => props.show_block_modal()}>
             <MdBlock className="mr-2 text-danger" />
             Block
           </Dropdown.Item>

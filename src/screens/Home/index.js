@@ -54,14 +54,14 @@ const Home = () => {
           </Link>
         </Col>
         <Col lg="3" md="6" sm="12" className="p-0">
-          <Link to="/message/">
+          <Link to="/subscription/">
             <div className="home-nav-link alert alert-danger m-0">
               <div className="d-flex w-100">
                 <img
-                  src={require("../../assets/images/messages.png").default}
+                  src={require("../../assets/images/subscription.png").default}
                   alt="icon"
                 />
-                <p>Messages</p>
+                <p>Subscription</p>
               </div>
             </div>
           </Link>

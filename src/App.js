@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
 import "./style.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "react-vis/dist/style.css";
 
 // components
 import Navbar from "./components/Navbar";
@@ -16,6 +17,7 @@ import Market from "./screens/Market";
 import Orders from "./screens/Orders";
 import Profile from "./screens/Profile";
 import Settings from "./screens/Settings";
+import Subscription from "./screens/Subscription";
 import Terms from "./screens/Terms";
 
 function App() {
@@ -30,6 +32,7 @@ function App() {
         <Route path="/orders/" component={Orders} />
         <Route path="/profile/" component={Profile} />
         <Route path="/settings/" component={Settings} />
+        <Route path="/subscription/" component={Subscription} />
         <Route path="/terms/" component={Terms} />
         <Route path="/404/" component={NotFound} />
         <Redirect to="/404/" />

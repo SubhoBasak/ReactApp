@@ -1,0 +1,20 @@
+.graph-bg {
+  background: #ddd;
+}
+.graph-canvas {
+  height: 700px;
+  overflow-x: scroll;
+  background: #fff;
+}
+.graph-canvas:hover {
+  box-shadow: 2px 2px 4px 2px gray;
+}
+.graph-canvas::-webkit-scrollbar {
+  height: 8px;
+  width: 0px;
+}
+@media screen and (max-width: 600px) {
+  .graph-canvas {
+    height: 400px;
+  }
+}

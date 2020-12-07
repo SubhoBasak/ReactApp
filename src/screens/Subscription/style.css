@@ -1,0 +1,14 @@
+.pack-card {
+  width: 23rem;
+  border-width: 5px;
+  border-radius: 15px;
+}
+.list-group-flush {
+  font-size: 20px;
+}
+.subscribe-btn {
+  font-size: 18px;
+}
+.pack-card:hover {
+  box-shadow: 2px 2px 4px 2px gray;
+}
