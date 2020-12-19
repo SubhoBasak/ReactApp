@@ -8,6 +8,10 @@ import { TiTickOutline } from "react-icons/ti";
 const Details = (props) => {
   return (
     <>
+      <div className="d-flex w-100 justify-content-center my-5">
+        <h1>Product details</h1>
+      </div>
+      <hr className="bg-primary mx-4" />
       <Row>
         <Col lg="6" md="12" className="img-container">
           <div className="main-img-container">

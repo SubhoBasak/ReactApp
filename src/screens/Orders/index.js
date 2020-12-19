@@ -29,7 +29,7 @@ const Orders = () => {
   return (
     <>
       <div className="d-flex justify-content-center p-3">
-        <h1>Messages</h1>
+        <h1>Orders</h1>
       </div>
       <Drawer
         top={
