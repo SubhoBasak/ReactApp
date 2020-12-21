@@ -11,7 +11,7 @@ const Card = (props) => {
     <CardBT className="card-view">
       <CardBT.Img variant="top" src={props.image} />
       <CardBT.Body>
-        <Link to="/details/">
+        <Link to={"/details/"+props.product_id}>
           <CardBT.Title>{props.title}</CardBT.Title>
         </Link>
         <Rating rate={props.rate} />

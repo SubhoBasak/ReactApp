@@ -1,3 +1,9 @@
 .banner-container {
   min-height: 100px;
+  z-index: -3;
+}
+.banner-container img{
+  width: 800px;
+  height: 400px;
+  object-fit: cover;
 }

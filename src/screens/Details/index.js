@@ -1,11 +1,27 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 import { Col, Row, Button } from "react-bootstrap";
+import { product_details } from "../../API/api";
 import "./style.css";
 
 // import icons
 import { TiTickOutline } from "react-icons/ti";
 
 const Details = (props) => {
+  const [details, setDetails] = React.useState({})
+  const pid = useParams().pid
+
+  React.useEffect(() => {
+    product_details(pid, setDetails)
+  }, [])
+
+  const set_images = (images) => {
+    const all_images = images.map((img) => {
+      return <img src="https://picsum.photos/858/660" alt="product" />
+    })
+    return all_images
+  }
+
   return (
     <>
       <div className="d-flex w-100 justify-content-center my-5">
@@ -28,12 +44,12 @@ const Details = (props) => {
             <img src="https://picsum.photos/858/660" alt="product" />
             <img src="https://picsum.photos/858/660" alt="product" />
             <img src="https://picsum.photos/858/660" alt="product" />
-            <img src="https://picsum.photos/858/660" alt="product" />
+
           </div>
         </Col>
         <Col lg="6" md="12" className="p-lg-4 p-md-4 product-details-text">
-          <h2 className="m-3">Product 1</h2>
-          <h3 className="text-danger m-3">Rs. 300/-</h3>
+          <h2 className="m-3">{details.name}</h2>
+          <h3 className="text-danger m-3">Rs. {details.price}/-</h3>
           <Row className="details-btn mx-3 my-5">
             <Button className="mr-2" variant="primary">
               Order
@@ -41,11 +57,7 @@ const Details = (props) => {
             <Button variant="success">Message</Button>
           </Row>
           <p className="m-3 text-dark mb-5">
-            This is a long long long product description for testing. This is a
-            long long long product description for testing. This is a long long
-            long product description for testing. This is a long long long
-            product description for testing. This is a long long long product
-            description for testing.
+            {details.description}
           </p>
           <ul className="ml-5">
             <li className="text-primary">

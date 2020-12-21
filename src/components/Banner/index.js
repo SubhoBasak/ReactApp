@@ -1,19 +1,25 @@
 import React from "react";
 import { Carousel } from "react-bootstrap";
+import {MEDIA_URL, big_banners} from "../../API/api";
 import "./style.css";
 
 // TODO - use API
-import test_data from "./test_data.json";
+// import banners from "./test_data.json";
 
 const Banner = () => {
+    const [banners, setBanners] = React.useState([])
+    React.useEffect(() => {
+        big_banners(setBanners)
+    }, [])
+
   // create each slides
-  const slides = test_data.map((data) => {
+  const slides = banners.map((data, index) => {
     return (
-      <Carousel.Item>
-        <img className="d-block w-100" src={data.image} alt="banner" />
+      <Carousel.Item key={index}>
+        <img className="d-block w-100" src={MEDIA_URL+data.image} alt="banner" />
         <Carousel.Caption>
-          <h3>{data.title}</h3>
-          <p>{data.text}</p>
+          <h3 style={{color: data.header_color}}>{data.header}</h3>
+          <p style={{color: data.description_color}}>{data.description}</p>
         </Carousel.Caption>
       </Carousel.Item>
     );
@@ -23,7 +29,6 @@ const Banner = () => {
     <Carousel
       className="banner-container"
       interval={1500}
-      style={{ zIndex: "-3" }}
     >
       {slides}
     </Carousel>

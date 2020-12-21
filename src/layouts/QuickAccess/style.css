@@ -6,6 +6,7 @@
   border-radius: 15px;
   text-decoration: none;
   color: #222;
+  white-space: nowrap;
 }
 .quick-link:hover {
   text-decoration: none;
