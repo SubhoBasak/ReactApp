@@ -2,17 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b97c390-f395-4ac0-9f2e-7cf7d8d4e65f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/AboutUs/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/AboutUs/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/Acknowledgements/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/ContactUs/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/ContactUs/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/Report/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/API/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/API/api.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Banner/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Banner/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Banner/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Banner/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Card/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/QuickLink/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QuickLink/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Rating/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Rating/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Vcard/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Vcard/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layouts/CardGrid/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/CardGrid/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/QuickAccess/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/QuickAccess/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/QuickAccess/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/QuickAccess/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/Details/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/Details/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/Details/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/Details/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/Home/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/Home/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/Market/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/Market/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/Market/test_data.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/Orders/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/Orders/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +34,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="CSS File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -39,6 +52,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -65,6 +79,13 @@
       <updated>1608535512735</updated>
       <workItem from="1608535515228" duration="8275000" />
       <workItem from="1608556367887" duration="10213000" />
+      <workItem from="1608605817145" duration="5001000" />
+      <workItem from="1608651411924" duration="5018000" />
+      <workItem from="1608697140443" duration="3103000" />
+      <workItem from="1608702563376" duration="4526000" />
+      <workItem from="1608707161619" duration="9992000" />
+      <workItem from="1608731654796" duration="70000" />
+      <workItem from="1608778674086" duration="5974000" />
     </task>
     <servers />
   </component>

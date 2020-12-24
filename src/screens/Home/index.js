@@ -76,9 +76,9 @@ const Home = () => {
         </Col>
         <Col lg="5" md="6" sm="12" className="grow-text mt-lg-5">
           <p className="grow-text-header mt-lg-2">Grow your business with us</p>
-          <p className="grow-text-body">
-            Connect with the large community. More designes, more categories,
-            more merchants. Work smart, not hard.
+          <div className="grow-text-body">
+              <p>Connect with the large community. More designes, more categories,
+              more merchants. Work smart, not hard.</p>
             <ul className="mt-5 pl-3">
               <li className="m-2 text-primary">
                 <TiTickOutline className="mr-2" />
@@ -97,7 +97,7 @@ const Home = () => {
                 Safe and secure
               </li>
             </ul>
-          </p>
+          </div>
         </Col>
       </Row>
     </>

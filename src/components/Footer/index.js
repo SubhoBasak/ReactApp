@@ -31,6 +31,9 @@ const Footer = () => {
             <li>
               <Link to={"/terms/"}>Terms & Conditions</Link>
             </li>
+            <li>
+              <Link to={"/acknowledgements/"}>Acknowledgements</Link>
+            </li>
           </ul>
         </Col>
         <Col md="4" sm="12">
@@ -61,7 +64,7 @@ const Footer = () => {
               Newsletter
             </h3>
             <input
-              class="form-control m-1"
+              className="form-control m-1"
               type="email"
               placeholder="Email"
               required

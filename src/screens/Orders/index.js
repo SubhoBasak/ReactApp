@@ -17,7 +17,6 @@ const Orders = () => {
   const [modalView, setModalView] = React.useState([false, ""]);
 
   const [bottomView, setBottomView] = React.useState(0);
-  console.log(bottomView);
 
   let bottom_view = <Unselect />;
   if (bottomView === 1) {
@@ -25,7 +24,6 @@ const Orders = () => {
   } else if (bottomView === 2) {
     bottom_view = <Profile />;
   }
-
   return (
     <>
       <div className="d-flex justify-content-center p-3">

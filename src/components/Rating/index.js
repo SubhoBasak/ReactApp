@@ -10,7 +10,7 @@ const Rating = (props) => {
     stars.push(<BsStarFill />);
   }
   for (let i = props.rate; i < 5; i++) {
-    stars.push(<BsStar />);
+    stars.push(<BsStar key={i} />);
   }
   return (
     <div

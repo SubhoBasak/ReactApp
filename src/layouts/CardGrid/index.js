@@ -8,8 +8,8 @@ import Card from "../../components/Card";
 const CardGrid = (props) => {
   const items = props.products.map((data, index) => (
     <Card
-        key={index}
-        product_id={data.id}
+      key={index}
+      product_id={data.id}
       title={data.name}
       image={MEDIA_URL+data.get_thumbnail}
       text={data.description}

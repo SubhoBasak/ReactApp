@@ -1,0 +1,17 @@
+.contact-us-img{
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+}
+.contact-us-form input{
+    font-size: 17px;
+    margin: 1.3rem 0.5rem 0rem 0.5rem;
+}
+.contact-us-form textarea{
+    font-size: 18px;
+    margin: 1.3rem 0.5rem 0rem 0.5rem;
+}
+.contact-us-form button{
+    font-size: 18px;
+    margin: 1.3rem 0rem 0rem 0.5rem;
+}

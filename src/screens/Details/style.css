@@ -4,10 +4,12 @@
 .main-img-container {
   display: flex;
   justify-content: center;
+  width: 100%;
+  height: 80vh;
 }
 .main-img-container img {
-  max-width: 100%;
-  max-height: 660px;
+  width: 100%;
+  height: 100%;
   object-fit: scale-down;
 }
 .sub-imgs {

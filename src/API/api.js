@@ -26,8 +26,24 @@ export function product_list(json_cb){
         .then(json => json_cb(json))
 }
 
-export function product_details(pid, json_cb){
+export function product_details(pid, json_cb, flag_cb){
     fetch(product_api+'/product_details/'+pid)
         .then(res => res.json())
-        .then(json => json_cb(json))
+        .then(json => {
+            json_cb(json)
+            flag_cb(true)
+        })
 }
+
+// User APIs
+export function contact_list(json_cb, flag_cb){
+    fetch(user_api+'/contact_list/', {headers:
+            {Authorization: 'token ad914a410357f232708ee12c0ee0834fd0c04e27'}})
+        .then(res => res.json())
+        .then(json => {
+            json_cb(json)
+            flag_cb(true)
+        })
+}
+
+// export function remove_contact(id)

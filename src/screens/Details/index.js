@@ -1,25 +1,83 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { Col, Row, Button } from "react-bootstrap";
-import { product_details } from "../../API/api";
+import { MEDIA_URL, product_details } from "../../API/api";
 import "./style.css";
 
 // import icons
 import { TiTickOutline } from "react-icons/ti";
 
 const Details = (props) => {
+  const [load, setLoad] = React.useState(false)
   const [details, setDetails] = React.useState({})
+  const [top_img, setTopImg] = React.useState(null)
   const pid = useParams().pid
 
   React.useEffect(() => {
-    product_details(pid, setDetails)
-  }, [])
+    product_details(pid, setDetails, setLoad)
+  }, [pid])
 
-  const set_images = (images) => {
-    const all_images = images.map((img) => {
-      return <img src="https://picsum.photos/858/660" alt="product" />
-    })
-    return all_images
+  function set_images() {
+    if(load){
+      const all_images = details.productimage_set.map((image) => {
+        return <img onClick={() => setTopImg(MEDIA_URL+image.image)}
+                    src={MEDIA_URL+image.image} alt="product" />
+      })
+      return all_images
+    }
+  }
+
+  function set_spec() {
+    if(load){
+      const all_spec = details.productspecification_set.map((spec, index) => {
+        if(index%4 === 0){
+          return (
+              <li className="text-primary">
+                <TiTickOutline /> {spec.spec}
+              </li>
+          )
+        } else if(index%4 === 1){
+          return (
+              <li className="text-success">
+                <TiTickOutline /> {spec.spec}
+              </li>
+          )
+        } else if(index%4 === 2){
+          return (
+              <li className="text-warning">
+                <TiTickOutline /> {spec.spec}
+              </li>
+          )
+        } else {
+          return (
+              <li className="text-danger">
+                <TiTickOutline /> {spec.spec}
+              </li>
+          )
+        }
+      })
+      return all_spec;
+    }
+  }
+
+  function set_top_img(image){
+    if(top_img){
+      return (
+          <img
+              className="main-img"
+              src={top_img}
+              alt="product"
+          />
+      )
+    } else if(load){
+      return (
+          <img
+              className="main-img"
+              src={MEDIA_URL+details.productimage_set[0].image}
+              alt="product"
+          />
+      )
+    }
   }
 
   return (
@@ -31,20 +89,10 @@ const Details = (props) => {
       <Row>
         <Col lg="6" md="12" className="img-container">
           <div className="main-img-container">
-            <img
-              className="main-img"
-              src="https://picsum.photos/858/660"
-              alt="product"
-            />
+            {set_top_img()}
           </div>
           <div className="sub-imgs mx-lg-3">
-            <img src="https://picsum.photos/858/660" alt="product" />
-            <img src="https://picsum.photos/858/660" alt="product" />
-            <img src="https://picsum.photos/858/660" alt="product" />
-            <img src="https://picsum.photos/858/660" alt="product" />
-            <img src="https://picsum.photos/858/660" alt="product" />
-            <img src="https://picsum.photos/858/660" alt="product" />
-
+            {set_images()}
           </div>
         </Col>
         <Col lg="6" md="12" className="p-lg-4 p-md-4 product-details-text">
@@ -60,18 +108,7 @@ const Details = (props) => {
             {details.description}
           </p>
           <ul className="ml-5">
-            <li className="text-primary">
-              <TiTickOutline /> Product specification 1
-            </li>
-            <li className="text-success">
-              <TiTickOutline /> Product specification 2
-            </li>
-            <li className="text-warning">
-              <TiTickOutline /> Product specification 3
-            </li>
-            <li className="text-danger">
-              <TiTickOutline /> Product specification 4
-            </li>
+            {set_spec()}
           </ul>
         </Col>
       </Row>

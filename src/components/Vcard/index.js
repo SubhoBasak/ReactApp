@@ -1,5 +1,7 @@
 import React from "react";
+import { Redirect } from "react-router-dom";
 import { Button, Dropdown, DropdownButton } from "react-bootstrap";
+import {contact_list, MEDIA_URL} from "../../API/api";
 import "./style.css";
 
 // import icons
@@ -10,10 +12,14 @@ import { AiOutlineUserDelete } from "react-icons/ai";
 import { GoReport } from "react-icons/go";
 import { BiDotsVerticalRounded } from "react-icons/bi";
 
-// TODO - use API
-import test_data from "./test_data.json";
-
 const Vcard = (props) => {
+  const [load, setLoad] = React.useState(false)
+  const [contacts, setContacts] = React.useState([])
+
+  React.useEffect(() => {
+    contact_list(setContacts, setLoad)
+  }, [])
+
   const show_profile = () => {
     if (window.screen.width < 770) {
       window.location.replace(
@@ -24,43 +30,52 @@ const Vcard = (props) => {
     }
   };
 
-  const cards = test_data.map((data) => {
-    return (
-      <div className="vcard">
-        <div className="vcard-profile">
-          <img src={data.image} alt="profile" />
-          <div className="vcard-text">
-            <p>{data.name}</p>
-            <span>{data.phone}</span>
-            <br />
-            <span>{data.city}</span>
-          </div>
-        </div>
-        <DropdownButton
-          id="dropdown-basic-button"
-          title={<BiDotsVerticalRounded />}
-          variant="light"
-        >
-          <Dropdown.Item onClick={() => show_profile()}>
-            <FiUser className="mr-2" />
-            Profile
-          </Dropdown.Item>
-          <Dropdown.Item onClick={() => props.show_remove_modal()}>
-            <AiOutlineUserDelete className="mr-2" />
-            Remove
-          </Dropdown.Item>
-          <Dropdown.Item href="#">
-            <GoReport className="mr-2" />
-            Report
-          </Dropdown.Item>
-          <Dropdown.Item onClick={() => props.show_block_modal()}>
-            <MdBlock className="mr-2 text-danger" />
-            Block
-          </Dropdown.Item>
-        </DropdownButton>
-      </div>
-    );
-  });
+  function load_card(){
+    if(load){
+      if(contacts.detail){
+        return (
+            <Redirect to={{pathname: '/', state: {login_require: true}}} />
+        )
+      }
+      return contacts.map((data, index) => {
+        return (
+            <div key={index} className="vcard">
+              <div className="vcard-profile">
+                <img src={MEDIA_URL+data.image} alt="profile" />
+                <div className="vcard-text">
+                  <p>{data.u_name}</p>
+                  <span>{data.phone}</span>
+                  <br />
+                  <span>{data.address}</span>
+                </div>
+              </div>
+              <DropdownButton
+                  id="dropdown-basic-button"
+                  title={<BiDotsVerticalRounded />}
+                  variant="light"
+              >
+                <Dropdown.Item onClick={() => show_profile()}>
+                  <FiUser className="mr-2" />
+                  Profile
+                </Dropdown.Item>
+                <Dropdown.Item onClick={() => props.show_remove_modal()}>
+                  <AiOutlineUserDelete className="mr-2" />
+                  Remove
+                </Dropdown.Item>
+                <Dropdown.Item href="#">
+                  <GoReport className="mr-2" />
+                  Report
+                </Dropdown.Item>
+                <Dropdown.Item onClick={() => props.show_block_modal()}>
+                  <MdBlock className="mr-2 text-danger" />
+                  Block
+                </Dropdown.Item>
+              </DropdownButton>
+            </div>
+        );
+      });
+    }
+  }
 
   return (
     <>
@@ -74,7 +89,7 @@ const Vcard = (props) => {
           <FaSearch />
         </Button>
       </div>
-      {cards}
+      {load_card()}
     </>
   );
 };
