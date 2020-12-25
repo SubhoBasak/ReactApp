@@ -1,5 +1,4 @@
 import React from "react";
-import "./style.css";
 
 // import icons
 import { BsStar, BsStarFill } from "react-icons/bs";
@@ -7,7 +6,7 @@ import { BsStar, BsStarFill } from "react-icons/bs";
 const Rating = (props) => {
   let stars = [];
   for (let i = 0; i < props.rate; i++) {
-    stars.push(<BsStarFill />);
+    stars.push(<BsStarFill key={i} />);
   }
   for (let i = props.rate; i < 5; i++) {
     stars.push(<BsStar key={i} />);

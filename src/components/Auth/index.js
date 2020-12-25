@@ -19,7 +19,7 @@ const Auth = (props) => {
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
           <img
-            src={require("../../assets/images/favicon.ico").default}
+            src={require("../../assets/images/favicon.png").default}
             width={30}
             height={30}
             className="mr-2"

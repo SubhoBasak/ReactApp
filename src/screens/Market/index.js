@@ -1,17 +1,25 @@
 import React from "react";
-import {product_list} from "../../API/api";
+import { all_shops } from "../../API/api";
 
 // components
 import Banner from "../../components/Banner";
 
 // layout
-import CardGrid from "../../layouts/CardGrid";
+import Shop from "../../layouts/Shop";
 
 const Market = () => {
-    const [products, setProducts] = React.useState([])
+    const [load, setLoad] = React.useState(false)
+    const [shops, setShop] = React.useState([])
+
     React.useEffect(() => {
-        product_list(setProducts)
+        all_shops(setShop, setLoad)
     }, [])
+
+    function set_shops(){
+        if(load){
+            return shops.map((data, index) => <Shop key={index} data={data} />)
+        }
+    }
 
   return (
     <>
@@ -19,7 +27,7 @@ const Market = () => {
       <div className="d-flex w-100 justify-content-center my-5">
         <h1>Market</h1>
       </div>
-      <CardGrid products={products} />
+        {set_shops()}
     </>
   );
 }

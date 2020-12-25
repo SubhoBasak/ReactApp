@@ -4,6 +4,10 @@ import { Col, Row, Button } from "react-bootstrap";
 import { MEDIA_URL, product_details } from "../../API/api";
 import "./style.css";
 
+// components
+import Rating from "../../components/Rating";
+import ShopHeaderPlate from "../../components/ShopHeaderPlate";
+
 // import icons
 import { TiTickOutline } from "react-icons/ti";
 
@@ -80,6 +84,32 @@ const Details = (props) => {
     }
   }
 
+  function set_user_profile(){
+   if(load){
+      return (
+          <ShopHeaderPlate shop_id={details.user.id} u_name={details.user.u_name}
+                              phone={details.user.phone} address={details.user.address}
+                              image={details.user.image} />
+      )
+   }
+  }
+
+  function all_colors(){
+    if(load){
+      const colors = details.productcolor_set.map((color) => {
+        return (
+            <div className="color-badge" style={{background: color.color}}>
+            </div>
+        )
+      })
+      return (
+          <div className="color-badge-container">
+            {colors}
+          </div>
+      )
+    }
+  }
+
   return (
     <>
       <div className="d-flex w-100 justify-content-center my-5">
@@ -98,6 +128,10 @@ const Details = (props) => {
         <Col lg="6" md="12" className="p-lg-4 p-md-4 product-details-text">
           <h2 className="m-3">{details.name}</h2>
           <h3 className="text-danger m-3">Rs. {details.price}/-</h3>
+          <div className="m-3">
+            <Rating rate={details.rating} />
+            {all_colors()}
+          </div>
           <Row className="details-btn mx-3 my-5">
             <Button className="mr-2" variant="primary">
               Order
@@ -110,6 +144,7 @@ const Details = (props) => {
           <ul className="ml-5">
             {set_spec()}
           </ul>
+          {set_user_profile()}
         </Col>
       </Row>
     </>

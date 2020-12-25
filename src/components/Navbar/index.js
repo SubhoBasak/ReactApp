@@ -30,9 +30,9 @@ const Navbar = () => {
       <NavbarBT bg="light" expand="md" className="navbar">
         <NavbarBT.Brand className="navbar-brand" href="/">
           <img
-            src={require("../../assets/images/favicon.ico").default}
-            width={30}
-            height={30}
+            src={require("../../assets/images/favicon.png").default}
+            width={32}
+            height={32}
             className="mr-2 text-dark"
             alt="brand logo"
           />

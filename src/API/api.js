@@ -13,6 +13,18 @@ export function big_banners(json_cb){
         .then(json => json_cb(json))
 }
 
+// Market APIs
+export function all_shops(json_cb, load_cb){
+    fetch(market_api+'/shops/', {headers:
+            {Authorization: 'token ad914a410357f232708ee12c0ee0834fd0c04e27'}
+    })
+        .then(res => res.json())
+        .then(json => {
+            json_cb(json)
+            load_cb(true)
+        })
+}
+
 // Product APIs
 export function all_categories(json_cb){
     fetch(product_api+'/all_categories/')
@@ -46,4 +58,17 @@ export function contact_list(json_cb, flag_cb){
         })
 }
 
-// export function remove_contact(id)
+export function contact_us(data, res_cb){
+    fetch(user_api+'/contact_us/', {
+        method: 'POST',
+        body: JSON.stringify(data)
+    })
+        .then(res => {
+            if(res.status === 200){
+                res_cb(true)
+            }
+            else{
+                res_cb(false)
+            }
+        })
+}
