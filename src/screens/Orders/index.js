@@ -15,14 +15,14 @@ import Profile from "../Profile";
 
 const Orders = () => {
   const [modalView, setModalView] = React.useState([false, ""]);
-
   const [bottomView, setBottomView] = React.useState(0);
+  const [selected_id, setSelectedId] = React.useState(null);
 
   let bottom_view = <Unselect />;
   if (bottomView === 1) {
     bottom_view = <Order />;
   } else if (bottomView === 2) {
-    bottom_view = <Profile />;
+    bottom_view = <Profile pid={selected_id} />;
   }
   return (
     <>
@@ -32,10 +32,22 @@ const Orders = () => {
       <Drawer
         top={
           <Vcard
-            set_order_view={() => setBottomView(1)}
-            set_profile_view={() => setBottomView(2)}
-            show_remove_modal={() => setModalView([true, "remove"])}
-            show_block_modal={() => setModalView([true, "block"])}
+            set_order_view={(id) => {
+                setSelectedId(id)
+                setBottomView(1)
+            }}
+            set_profile_view={(id) => {
+                setSelectedId(id)
+                setBottomView(2)
+            }}
+            show_remove_modal={(id) => {
+                setSelectedId(id)
+                setModalView([true, "remove"])
+            }}
+            show_block_modal={(id) => {
+                setSelectedId(id)
+                setModalView([true, "block"])
+            }}
           />
         }
         bottom={bottom_view}

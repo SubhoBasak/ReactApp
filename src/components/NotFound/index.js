@@ -9,7 +9,7 @@ const NotFound = () => {
   return (
     <div className="not-found">
       <div className="not-found-content">
-        <img src="/assets/images/broken.png" alt="Icon" />
+        <img src={require('../../assets/images/broken.png').default} alt="Icon" />
         <br />
         <GiBreakingChain className="not-found-icon mr-2 text-dark" />
         <h1>

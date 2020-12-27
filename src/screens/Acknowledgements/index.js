@@ -11,18 +11,27 @@ const Acknowledgements = () => {
                 <p>Most of the static images used in our website is </p>
                 <ul className="mx-5">
                     <li>
-                        <a  className="text-primary" href="http://www.freepik.com" target="_blank" rel="noopener noreferrer">
+                        <a  className="text-primary" href="http://www.freepik.com" target="_blank"
+                            rel="noopener noreferrer">
                             Designed by pikisuperstar / Freepik
                         </a>
                     </li>
                     <li>
-                        <a  className="text-success" href="http://www.freepik.com" target="_blank" rel="noopener noreferrer">
+                        <a  className="text-success" href="http://www.freepik.com" target="_blank"
+                            rel="noopener noreferrer">
                             Designed by pch.vector / Freepik
                         </a>
                     </li>
                     <li>
-                        <a  className="text-warning" href="http://www.freepik.com" target="_blank" rel="noopener noreferrer">
+                        <a  className="text-warning" href="http://www.freepik.com" target="_blank"
+                            rel="noopener noreferrer">
                             Designed by vectorjuice / Freepik
+                        </a>
+                    </li>
+                    <li>
+                        <a  className="text-danger" href="http://www.freepik.com" target="_blank"
+                            rel="noopener noreferrer">
+                            Designed by starline / Freepik
                         </a>
                     </li>
                 </ul>

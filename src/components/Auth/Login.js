@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
+import { login } from "../../API/api";
 
 // import icons
 import { BiLogInCircle } from "react-icons/bi";
@@ -9,6 +10,28 @@ import { BiLogInCircle } from "react-icons/bi";
 import Password from "../Password";
 
 const Login = (props) => {
+    const [email_ip, setEmail] = React.useState(null)
+    const [password_ip, setPassword] = React.useState(null)
+    const [login_status, setLoginStatus] = React.useState(null)
+
+    function login_now(){
+        login({email: email_ip, password: password_ip},
+            setLoginStatus)
+    }
+
+    if(login_status) {
+        if (login_status === 203) {
+            setLoginStatus(null)
+            alert('Email and password does not match!')
+        } else if (login_status === 404) {
+            setLoginStatus(null)
+            alert('Can\'t find any account with this email!')
+        } else {
+            setLoginStatus(null)
+            alert(login_status.key)
+        }
+    }
+
   return (
     <>
       <h4 style={{ color: "#888" }}>
@@ -20,10 +43,15 @@ const Login = (props) => {
           className="form-control my-3"
           type="email"
           placeholder="Email"
+          onChange={data => setEmail(data.target.value)}
           required
         />
-        <Password this_id="1" placeholder="Password" />
-        <Button className="btn-success my-3" type="submit">
+        <Password this_id="1" placeholder="Password"
+                  onChange={setPassword}
+        />
+        <Button className="btn-success my-3" type="submit"
+                onClick={login_now}
+        >
           Login
         </Button>
       </div>

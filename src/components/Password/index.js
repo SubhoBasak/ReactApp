@@ -20,6 +20,7 @@ const Password = (props) => {
         className="password-inp form-control my-3"
         type="password"
         placeholder={props.placeholder}
+        onChange={data => props.onChange(data.target.value)}
       />
       <button
         className="password-btn text-dark"

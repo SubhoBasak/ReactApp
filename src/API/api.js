@@ -33,13 +33,15 @@ export function all_categories(json_cb){
 }
 
 export function product_list(json_cb){
-    fetch(product_api+'/product_list/')
+    fetch(product_api+'/product_list/', {headers:
+            {Authorization: 'token ad914a410357f232708ee12c0ee0834fd0c04e27'}})
         .then(res => res.json())
         .then(json => json_cb(json))
 }
 
 export function product_details(pid, json_cb, flag_cb){
-    fetch(product_api+'/product_details/'+pid)
+    fetch(product_api+'/product_details/'+pid, {headers:
+            {Authorization: 'token ad914a410357f232708ee12c0ee0834fd0c04e27'}})
         .then(res => res.json())
         .then(json => {
             json_cb(json)
@@ -48,6 +50,23 @@ export function product_details(pid, json_cb, flag_cb){
 }
 
 // User APIs
+export function login(data, flag_cb){
+    fetch(user_api+'/login/', {
+        method: 'POST',
+        body: JSON.stringify(data)
+    })
+        .then(res => {
+            if(res.status === 200){
+                res.json()
+                    .then(json => flag_cb(json))
+            } else if(res.status === 203) {
+                flag_cb(203)
+            } else {
+                flag_cb(404)
+            }
+        })
+}
+
 export function contact_list(json_cb, flag_cb){
     fetch(user_api+'/contact_list/', {headers:
             {Authorization: 'token ad914a410357f232708ee12c0ee0834fd0c04e27'}})
@@ -71,4 +90,11 @@ export function contact_us(data, res_cb){
                 res_cb(false)
             }
         })
+}
+
+export function profile_details(pid, json_cb){
+    fetch(user_api+'/profile_details/'+pid, {headers:
+            {Authorization: 'token ad914a410357f232708ee12c0ee0834fd0c04e27'}})
+        .then(res => res.json())
+        .then(json => json_cb(json))
 }

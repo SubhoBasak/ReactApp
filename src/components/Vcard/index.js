@@ -20,13 +20,13 @@ const Vcard = (props) => {
     contact_list(setContacts, setLoad)
   }, [])
 
-  const show_profile = () => {
+  const show_profile = (pid) => {
     if (window.screen.width < 770) {
       window.location.replace(
-        window.location.protocol + "//" + window.location.host + "/profile/"
+        window.location.protocol + "//" + window.location.host + "/profile/" + pid
       );
     } else {
-      props.set_profile_view();
+      props.set_profile_view(pid);
     }
   };
 
@@ -54,19 +54,19 @@ const Vcard = (props) => {
                   title={<BiDotsVerticalRounded />}
                   variant="light"
               >
-                <Dropdown.Item onClick={() => show_profile()}>
+                <Dropdown.Item onClick={() => show_profile(data.id)}>
                   <FiUser className="mr-2" />
                   Profile
                 </Dropdown.Item>
-                <Dropdown.Item onClick={() => props.show_remove_modal()}>
+                <Dropdown.Item onClick={() => props.show_remove_modal(data.id)}>
                   <AiOutlineUserDelete className="mr-2" />
                   Remove
                 </Dropdown.Item>
-                <Dropdown.Item href="#">
+                <Dropdown.Item href="/report/">
                   <GoReport className="mr-2" />
                   Report
                 </Dropdown.Item>
-                <Dropdown.Item onClick={() => props.show_block_modal()}>
+                <Dropdown.Item onClick={() => props.show_block_modal(data.id)}>
                   <MdBlock className="mr-2 text-danger" />
                   Block
                 </Dropdown.Item>

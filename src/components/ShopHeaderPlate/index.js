@@ -18,7 +18,7 @@ const ShopHeaderPlate = (props) => {
                     <img src={MEDIA_URL+props.image} alt="profile" />
                     <div className="seller-profile-txt text-dark">
                         <p>
-                            <Link to={'/profile/'}>
+                            <Link to={'/profile/'+props.shop_id}>
                                 <b>{props.u_name}</b>
                             </Link>
                         </p>

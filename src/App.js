@@ -37,7 +37,7 @@ function App() {
         <Route path="/details/:pid/" component={Details} />
         <Route path="/market/" component={Market} />
         <Route path="/orders/" component={Orders} />
-        <Route path="/profile/" component={Profile} />
+        <Route path="/profile/:pid/" component={Profile} />
         <Route path="/report/" component={Report} />
         <Route path="/settings/" component={Settings} />
         <Route path="/subscription/" component={Subscription} />
